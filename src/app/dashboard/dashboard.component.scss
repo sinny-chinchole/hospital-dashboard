@@ -1,0 +1,87 @@
+/* component-name.component.css */
+
+.container {
+    width: 100%; /* Default width */
+    .col-md-9 {
+        position: fixed;
+        left: 250px;
+        top: 0;
+        bottom: 0;
+        width: 690px; /* Adjust the width as needed */
+        background-color: #9f83ab;
+        padding: 20px;
+      }
+      .card{
+        background-color: #633677;
+        padding: 30px;
+        left: 5px;
+        top: 0px;
+        bottom: 0;
+        // opacity: 0.5;
+      }
+  }
+  @media (min-width: 320px) {
+    .container {
+      width: 320px; /* Adjusted width for tablets */
+      .col-md-9 {
+        position: fixed;
+        left: 120px;
+        top: 0;
+        bottom: 0;
+        width: 690px; /* Adjust the width as needed */
+        background-color: #9f83ab;
+        padding: 10px;
+      }
+    }
+    .card{
+    background-color: #633677;
+    padding: 30px;
+    // opacity: 0.5;
+  }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      width: 750px; /* Adjusted width for tablets */
+      .col-md-9 {
+        position: fixed;
+        left: 220px;
+        top: 0;
+        bottom: 0;
+        width: 992px; /* Adjust the width as needed */
+        background-color: #9f83ab;
+        padding: 20px;
+      }
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+    //   width: 970px; /* Adjusted width for small desktops */
+      .col-md-9 {
+        position: fixed;
+        left: 400px;
+        top: 0;
+        bottom: 0;
+        width: 1200px; /* Adjust the width as needed */
+        background-color: #9f83ab;
+        padding: 30px;
+      }
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; /* Adjusted width for large desktops */
+      .col-md-9 {
+        position: fixed;
+        left: 400px;
+        top: 0;
+        bottom: 0;
+        width: 1200px; /* Adjust the width as needed */
+        background-color: #9f83ab;
+        padding: 30px;
+      }
+    }
+  }
+  

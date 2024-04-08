@@ -1,0 +1,66 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px; /* Adjust the width as needed */
+    background-color: #633677;
+    padding: 20px;
+  }
+  
+
+.nav-link {
+    color: #9f83ab;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+@media (min-width: 320px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 120px; /* Adjust the width as needed */
+        background-color: #633677;
+        padding: 2px; /* Adjusted width for tablets */
+    }
+  }
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 300px; /* Adjust the width as needed */
+        background-color: #633677;
+        padding: 20px; /* Adjusted width for tablets */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 400px; /* Adjust the width as needed */
+        background-color: #633677;
+        padding: 30px; /* Adjusted width for tablets */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 400px; /* Adjust the width as needed */
+        background-color: #633677;
+        padding: 20px; /* Adjusted width for tablets */
+    }
+  }
