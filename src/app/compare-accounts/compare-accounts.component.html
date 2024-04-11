@@ -1,1 +1,27 @@
-<p>compare-accounts works!</p>
+<div class="container">
+    <h2>Widget : Compare Accounts</h2>
+    <div class="compare row">
+        <div class="input col-lg-6">
+            <input type="text" class="form-control" placeholder="Closed Account Number" aria-label="Username" [(ngModel)]="account1">
+        </div>
+        <br>
+        <div class="input col-lg-6">
+            <input type="text" class="form-control" placeholder="Enter closed account number" aria-label="Username" input [(ngModel)]="account2">
+        </div>
+    </div>
+    <br>
+
+    <div class="button" >
+        <button class="nav-link" routerLink="/results" routerLinkActive="active" (click)="compareAccounts()" type="button" class="btn btn-primary" style="background:#CBAB1D;">Compare Accounts </button>
+    </div>
+    
+
+    
+    
+    <!-- <div *ngIf="differences.length > 0">
+      <h3>Differences Found:</h3>
+      <ul>
+        <li *ngFor="let difference of differences">{{ difference }}</li>
+      </ul>
+    </div> -->
+</div>

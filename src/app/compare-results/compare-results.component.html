@@ -1,0 +1,53 @@
+<div class="container">
+    <h2>Widget : Compare Accounts</h2>
+    <div class="compare row">
+        <div class="input col-lg-6">
+            <input type="text" class="form-control" placeholder="Closed Account Number" aria-label="Username" [(ngModel)]="account1">
+        </div>
+        <br>
+        <div class="input col-lg-6">
+            <input type="text" class="form-control" placeholder="Enter closed account number" aria-label="Username" input [(ngModel)]="account2">
+        </div>
+    </div>
+    <br>
+
+    <div class="button" >
+        <button class="nav-link" routerLink="/results" routerLinkActive="active" (click)="compareAccounts()" type="button" class="btn btn-primary" style="background:#CBAB1D;">Compare Accounts </button>
+    </div>
+    <br>
+    <div class="table row">
+        <div class="col-lg-8">
+            
+        </div>
+        
+        <div class="dropdown col-lg-2">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Assign to
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown col-lg-2">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Export
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+    </div>
+    <h2>Compare Results</h2>
+    
+    
+    <!-- <div *ngIf="differences.length > 0">
+      <h3>Differences Found:</h3>
+      <ul>
+        <li *ngFor="let difference of differences">{{ difference }}</li>
+      </ul>
+    </div> -->
+</div>

@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { CompareAccountsComponent } from './compare-accounts/compare-accounts.component';
+import { CompareResultsComponent } from './compare-results/compare-results.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { CompareAccountsComponent } from './compare-accounts/compare-accounts.co
     HeaderComponent,
     DashboardComponent,
     HomeComponent,
-    CompareAccountsComponent
+    CompareAccountsComponent,
+    CompareResultsComponent
   ],
   imports: [
     BrowserModule,

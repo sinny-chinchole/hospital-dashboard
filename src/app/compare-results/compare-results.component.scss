@@ -1,13 +1,18 @@
 .container{
 
     margin-top: 50px;
-    text-align: center;
     color: #20387E;
    
     .button{
+        
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .dropdown{
+        button{
+            background:#3050AB;
+        }
     }
    
     

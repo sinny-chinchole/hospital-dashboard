@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-compare-accounts',
-  templateUrl: './compare-accounts.component.html',
-  styleUrl: './compare-accounts.component.scss'
+  selector: 'app-compare-results',
+  templateUrl: './compare-results.component.html',
+  styleUrl: './compare-results.component.scss'
 })
-export class CompareAccountsComponent {
+export class CompareResultsComponent {
   account1: string = ''; // First bank account number
   account2: string = ''; // Second bank account number
   differences: string[] = []; // Array to hold the differences
