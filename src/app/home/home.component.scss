@@ -2,6 +2,7 @@
 
 .container {
   width: 100%; /* Default width */
+  
   .col-md-9 {
       position: fixed;
       left: 250px;
@@ -10,8 +11,26 @@
       width: 690px; /* Adjust the width as needed */
       background-color: #9f83ab;
       padding: 20px;
+      h2{
+        color: #633677;
+      }
+      p{
+        color: #633677;
+      }
+      .col-lg-8{
+        .form-label{
+          color: #633677;
+
+        }
+        .form-control{
+          background: #633677;
+          
+
+        }
+       }
+  }
     }
-}
+    
 @media (min-width: 320px) {
   .container {
     width: 320px; /* Adjusted width for tablets */

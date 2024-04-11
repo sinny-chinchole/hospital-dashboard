@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,13 +17,15 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
+import { CompareAccountsComponent } from './compare-accounts/compare-accounts.component';
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     HeaderComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    CompareAccountsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatNativeDateModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule
    
   ],
   providers: [

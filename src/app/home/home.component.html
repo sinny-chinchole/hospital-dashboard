@@ -14,9 +14,55 @@
       <div>
         <p>Loading Home data...</p>
       </div>
+      <!-- <div class="form col-lg-8">
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" >
+          <label for="basic-url" class="form-label" >Name</label>
+          <label for="name" style="background: #633677; color: #9f83ab;">Name:</label>
+          <br>
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+          <br>
+          <label for="basic-url" class="form-label">Email</label>
+          <label for="email" style="background: #633677; color: #9f83ab;">Email:</label>
+          <br>
+          <input type="text" class="form-control"  placeholder="Email" aria-label="Username" >
+          <input type="email" id="email" name="email"  ngModel required email>
+          <br>
+          <br>
+        
+          <button type="submit" >Submit</button>
+          <button type="button" class="btn btn-primary" [disabled]="!myForm.valid" style="background: #633677; color: #9f83ab;">Submit</button>
+        </form>
+      </div> -->
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <label>
+          First Name:
+          <input type="text" formControlName="firstName">
+        </label>
+        <br>
+        <label>
+          Last Name:
+          <input type="text" formControlName="lastName">
+        </label>
+        <br>
+        <label>
+          Email:
+          <input type="email" formControlName="email">
+        </label>
+        <br>
+        <label>
+          Phone:
+          <input type="text" formControlName="phone">
+        </label>
+        <br>
+        <button type="submit" [disabled]="myForm.invalid">Submit</button>
+      </form>
+      <br>
+      <br>
+
+      
       <div class="col-md-4">
         <mat-form-field appearance="fill">
-        <mat-label>Select Date*:</mat-label>
+        <mat-label>Select Date</mat-label>
         <input matInput [matDatepicker]="picker" formControlName="selectedDate" class="neumorphic-input">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
@@ -25,4 +71,3 @@
     </div>
   </div>
 </div>
-

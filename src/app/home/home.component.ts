@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +8,15 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class HomeComponent {
 
-  form: FormGroup;
+  myForm: FormGroup;
   dateOptions: Date[]; // Array to hold date options
  
   constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
+    this.myForm = this.fb.group({
+      firstName: ['Sinny', Validators.required],
+      lastName: ['Chinchole', Validators.required],
+      email: ['sinny@gmail.com', [Validators.required, Validators.email]],
+      phone: ['1234567890', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       selectedDate: [null, Validators.required] // Initialize form control for selected date
     });
  
@@ -22,5 +26,11 @@ export class HomeComponent {
       new Date(2024, 3, 11), // April 11, 2024
       // Add more dates if needed
     ];
+  }
+  onSubmit() {
+    if (this.myForm.valid) {
+      console.log(this.myForm.value); // Use form.value to access form data
+      // Perform form submission logic here
+    }
   }
 }
