@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { CompareAccountsComponent } from './compare-accounts/compare-accounts.component';
 import { CompareResultsComponent } from './compare-results/compare-results.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,7 @@ import { CompareResultsComponent } from './compare-results/compare-results.compo
     DashboardComponent,
     HomeComponent,
     CompareAccountsComponent,
-    CompareResultsComponent
+    CompareResultsComponent,
   ],
   imports: [
     BrowserModule,

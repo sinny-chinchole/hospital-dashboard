@@ -2,18 +2,25 @@
 
     margin-top: 50px;
     color: #20387E;
-   
+    text-align: center;
+
     .button{
         
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .dropdown{
+    .col-lg-2{
         button{
             background:#3050AB;
         }
     }
-   
+    .table{
+        table-striped{
+            background: black
+        }
+
+    }
+    
     
 }
