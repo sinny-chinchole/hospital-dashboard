@@ -19,6 +19,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { CompareAccountsComponent } from './compare-accounts/compare-accounts.component';
 import { CompareResultsComponent } from './compare-results/compare-results.component';
+import { CaComponent } from './ca/ca.component';
+import { DropdownModule } from 'primeng/dropdown';
+import { TableModule } from 'primeng/table';
+import { MatCard } from '@angular/material/card';
+
 
 
 @NgModule({
@@ -30,6 +35,7 @@ import { CompareResultsComponent } from './compare-results/compare-results.compo
     HomeComponent,
     CompareAccountsComponent,
     CompareResultsComponent,
+    CaComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,11 @@ import { CompareResultsComponent } from './compare-results/compare-results.compo
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    DropdownModule,
+    TableModule,
+    MatCard
+    
    
   ],
   providers: [

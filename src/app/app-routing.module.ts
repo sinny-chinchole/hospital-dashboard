@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { CompareAccountsComponent } from './compare-accounts/compare-accounts.component';
 import { CompareResultsComponent } from './compare-results/compare-results.component';
+import { CaComponent } from './ca/ca.component';
 const routes: Routes = [
 
   { path: '', component:HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'accounts', component: CompareAccountsComponent},
   { path: 'results', component: CompareResultsComponent},
+  { path: 'ca', component: CaComponent},
 ];
 
 @NgModule({

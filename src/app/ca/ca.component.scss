@@ -1,0 +1,72 @@
+::ng-deep .abc .p-dropdown .p-dropdown-label {
+    display: flex;
+    align-items: center;
+  }
+  
+  ::ng-deep .colored .p-dropdown .p-dropdown-label {
+    display: flex;
+    align-items: center;
+    background: #3050AB;
+    color: white;
+  }
+  
+  
+  ::ng-deep .colored .p-dropdown .p-dropdown-trigger {
+    background: #3050AB;
+    color: white;
+  }
+//   ::ng-deep .p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
+//         color: #1D4ED8;
+//     }
+  
+  .card {
+    background: var(--surface-card);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    width: 80%;
+    background: rgba(243, 243, 243, 1);
+    border-color: rgba(184, 184, 184, 1);
+  }
+  
+  .p-button-compAcc {
+    background: rgba(203, 171, 29, 1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    width: 185px;
+  }
+  
+  .p-button-Save {
+    background: rgba(203, 171, 29, 1);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    width: 120px;
+    font-size: 16px;
+  }
+  
+  .fa.fa-plus-circle{
+    color: rgba(203, 171, 29, 1); 
+    margin-left: 9%;
+    font-size: 18px;
+  }
+  .CompareAccountTable th {
+    background-color: #3050AB;
+    color: white; /* Set text color to white for better contrast */
+    .p-datatable .p-sortable-column .p-sortable-column-icon {
+        color: red;
+        margin-left: 0.5rem;
+    }
+    
+    // .p-sortIcon{
+    //     background: red;
+    //   }
+  }
+  
+//   .p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
+//     color: #1D4ED8;
+// }
+  
