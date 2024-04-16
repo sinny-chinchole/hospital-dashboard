@@ -2,10 +2,10 @@
     <!-- Welcome Username Area -->
     <div class="row flex-gap-rm">
       <div class="col-lg-12 px-5 pt-3 bg-white shadow-sm">
-        <h1 class="page-title">
+        <!-- <h1 class="page-title">
           <span class="welcome-text">Welcome </span>
           <span class="name-text">John Mark!</span>
-        </h1>
+        </h1> -->
       </div>
     </div>
     <div class="row">
@@ -62,6 +62,9 @@
             class="colored"
             placeholder="Assign To"
             [appendTo]="'body'"
+            [options]="AssignArray"
+            optionLabel="name"
+            optionValue="id"
           ></p-dropdown>
         </div>
   
@@ -76,8 +79,8 @@
           >
             <ng-template let-option pTemplate="item">
               <span class="icon-container">
-                <i *ngIf="option.id === 1"> <img src="assets/img/excel.png" /></i>
-                <i *ngIf="option.id === 2"> <img src="assets/img/pdf.png" /></i>
+                <!-- <i *ngIf="option.id === 1"> <img src="assets/img/excel.png" /></i>
+                <i *ngIf="option.id === 2"> <img src="assets/img/pdf.png" /></i> -->
                 {{ option.name }}
               </span>
             </ng-template>
@@ -153,15 +156,15 @@
           <ng-template pTemplate="emptymessage" let-columns>
             <tr>
               <td class="text-center" [attr.colspan]="columns.length + 1">
-                No records found
+                select the parameter
               </td>
             </tr>
           </ng-template>
         </p-table>
         <mat-card>
-          <!-- <mat-card-content
+          <mat-card-content
             ><i class="fa fa-plus-circle" (click)="addRow()"></i
-          ></mat-card-content> -->
+          ></mat-card-content>
         </mat-card>
       </div>
   

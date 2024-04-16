@@ -23,7 +23,7 @@ import { CaComponent } from './ca/ca.component';
 import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 import { MatCard } from '@angular/material/card';
-
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -52,7 +52,8 @@ import { MatCard } from '@angular/material/card';
     FormsModule,
     DropdownModule,
     TableModule,
-    MatCard
+    MatCard,
+    MatCardModule
     
    
   ],

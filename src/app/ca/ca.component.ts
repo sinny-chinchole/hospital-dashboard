@@ -16,12 +16,24 @@ export class CaComponent {
   compareAccountViewdata: any[] = [];
   compareAccountColumnsdata: any[] = [];
   ExportArray: any[] = [];
+  AssignArray: any[] = [];
+  ReviewArray: any[] = [];
 
   constructor() {
     this.ExportArray = [
       { name: 'Excel', id: 1 },
       { name: 'PDF', id: 2 },
     ];
+    this.AssignArray = [
+      { name: 'William', id: 1 },
+      { name: 'Thomas', id: 2 },
+      { name: 'Michael', id: 3 },
+      { name: 'Robert', id: 4 },
+    ];
+    this.ReviewArray= [
+      { name: 'Yes', id: 1},
+      { name: 'No', id: 2}
+    ]
 
     this.compareAccountColumnsdata = [
       { field: 'parametersCompared', header: 'Parameters Compared' },
@@ -32,22 +44,22 @@ export class CaComponent {
 
     this.compareAccountViewdata = [
       {
-        parametersCompared: 'Start Date',
-        oldAccount: '08-25-2025',
-        newAccount: '02-25-2025',
-        remarks: "Matches with the old account's end date",
+        parametersCompared: '1',
+        oldAccount: '1',
+        newAccount: '1',
+        remarks: "1",
       },
       {
-        parametersCompared: 'End Date',
-        oldAccount: '02-25-2025',
-        newAccount: '08-25-2025',
-        remarks: 'Matches with the start date of new account',
+        parametersCompared: '1',
+        oldAccount: '1',
+        newAccount: '1',
+        remarks: '1',
       },
       {
-        parametersCompared: 'Name',
-        oldAccount: 'sumit',
-        newAccount: 'fgh',
-        remarks: 'fgh',
+        parametersCompared: '1',
+        oldAccount: '1',
+        newAccount: '1',
+        remarks: '1',
       },
     ];
   }
