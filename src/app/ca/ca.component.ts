@@ -18,6 +18,7 @@ export class CaComponent {
   ExportArray: any[] = [];
   AssignArray: any[] = [];
   ReviewArray: any[] = [];
+  ParaArray: { name: string; id: string; }[];
 
   constructor() {
     this.ExportArray = [
@@ -33,6 +34,12 @@ export class CaComponent {
     this.ReviewArray= [
       { name: 'Yes', id: 1},
       { name: 'No', id: 2}
+    ]
+    this.ParaArray=[
+      { name:'Parameter1', id:'1'},
+      { name:'Parameter2', id:'2'},
+      { name:'Parameter3', id:'3'},
+
     ]
 
     this.compareAccountColumnsdata = [
@@ -50,16 +57,16 @@ export class CaComponent {
         remarks: "1",
       },
       {
-        parametersCompared: '1',
-        oldAccount: '1',
-        newAccount: '1',
-        remarks: '1',
+        parametersCompared: '2',
+        oldAccount: '2',
+        newAccount: '2',
+        remarks: '2',
       },
       {
-        parametersCompared: '1',
-        oldAccount: '1',
-        newAccount: '1',
-        remarks: '1',
+        parametersCompared: '3',
+        oldAccount: '3',
+        newAccount: '3',
+        remarks: '3',
       },
     ];
   }
@@ -81,6 +88,4 @@ export class CaComponent {
     const lastIndex = this.compareAccountViewdata.length - 1;
     this.compareAccountViewdata[lastIndex].showDropdown = true;
   }
-
-
 }

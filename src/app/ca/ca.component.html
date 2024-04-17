@@ -113,7 +113,8 @@
                 [pSortableColumn]="col.field"
                 *ngFor="let col of columns"
               >
-                <p-sortIcon [field]="col.field" ></p-sortIcon>{{ col.header }}
+                <!-- <p-sortIcon [field]="col.field" ></p-sortIcon> -->
+                {{ col.header }}
               </th>
               <th class="review-column" title="Review">Review</th>
             </tr>
@@ -137,6 +138,9 @@
                     class="abc"
                     placeholder="Select the Parameter"
                     [appendTo]="'body'"
+                    [options]="ParaArray"
+                    optionLabel="name"
+                    optionValue="id"
                   >Assign To</p-dropdown>
                 </ng-template>
               </td>
@@ -152,7 +156,7 @@
               </td>
             </tr>
           </ng-template>
-  
+
           <ng-template pTemplate="emptymessage" let-columns>
             <tr>
               <td class="text-center" [attr.colspan]="columns.length + 1">
