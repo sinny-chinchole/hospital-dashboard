@@ -36,9 +36,9 @@ export class CaComponent {
       { name: 'No', id: 2}
     ]
     this.ParaArray=[
-      { name:'Parameter1', id:'1'},
-      { name:'Parameter2', id:'2'},
-      { name:'Parameter3', id:'3'},
+      { name:'Parameter 1', id:'1'},
+      { name:'Parameter 2', id:'2'},
+      { name:'Parameter 3', id:'3'},
 
     ]
 
@@ -88,4 +88,12 @@ export class CaComponent {
     const lastIndex = this.compareAccountViewdata.length - 1;
     this.compareAccountViewdata[lastIndex].showDropdown = true;
   }
+  saveData() {
+    // Here you can implement saving logic (e.g., send data to a server)
+    console.log('Saving data:', this.compareAccountViewdata);
+
+    // For demonstration purposes, you can clear the form data after saving
+    this.compareAccountViewdata = [];
+  }
 }
+

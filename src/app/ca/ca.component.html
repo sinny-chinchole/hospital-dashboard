@@ -141,7 +141,7 @@
                     [options]="ParaArray"
                     optionLabel="name"
                     optionValue="id"
-                  >Assign To</p-dropdown>
+                  >Select Parameter</p-dropdown>
                 </ng-template>
               </td>
               <td class="grid-review-buttons">
@@ -149,9 +149,12 @@
                   <p-dropdown
                     class="abc"
                     formControlName="no"
-                    placeholder="No"
+                    placeholder="Select"
                     [appendTo]="'body'"
-                  >Export</p-dropdown>
+                    [options]="ReviewArray"
+                    optionLabel="name"
+                    optionValue="id"
+                  >Review</p-dropdown>
                 </div>
               </td>
             </tr>
@@ -177,7 +180,7 @@
           <div class="d-flex justify-content-center">
             <div class="col-lg-12 px-5">
               <div class="d-flex justify-content-end">
-                <button
+                <button type="button" (click)="saveData()"
                   pButton
                   pRipple
                   label="Save"
