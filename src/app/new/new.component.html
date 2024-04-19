@@ -1,0 +1,191 @@
+<div class="container-fluid">
+    <!-- Welcome Username Area -->
+    <div class="row flex-gap-rm">
+      <div class="col-lg-12 px-5 pt-3 bg-white shadow-sm">
+        <h1 class="page-title">
+          <span class="welcome-text">Welcome </span>
+          <span class="name-text">John Mark!</span>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-12 d-flex align-items-center justify-content-center py-3"
+      >
+        <h1 style="color: rgba(32, 56, 126, 1); font-weight: 500">
+          Widget : Compare Accounts
+        </h1>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-6 d-flex justify-content-end">
+          <input
+            class="card"
+            pInputText
+            pKeyFilter="int"
+            placeholder="Enter closed account number"
+          />
+        </div>
+        <div class="col-lg-6 d-flex justify-content-start">
+          <input
+            class="card"
+            pInputText
+            pKeyFilter="int"
+            placeholder="Enter new account number"
+          />
+        </div>
+      </div>
+  
+      <div class="row">
+        <div
+          class="col-lg-12 d-flex align-items-center justify-content-center py-3"
+        >
+          <button
+            pButton
+            pRipple
+            label="Compare Account"
+            class="p-button-compAcc"
+            (click)="openCompareAccountTable()"
+          ></button>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="CompareAccountTable">
+      <div class="row">
+        <div class="col-lg-4 px-5">
+          <h1 style="color: rgba(32, 56, 126, 1)">Compare Results</h1>
+        </div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-2">
+          <p-dropdown
+            class="colored"
+            placeholder="Assign To"
+            [appendTo]="'body'"
+          ></p-dropdown>
+        </div>
+  
+        <div class="col-lg-2">
+          <p-dropdown
+            class="colored"
+            placeholder="Export"
+            [appendTo]="'body'"
+            [options]="ExportArray"
+            optionLabel="name"
+            optionValue="id"
+          >
+            <ng-template let-option pTemplate="item">
+              <span class="icon-container">
+                <i *ngIf="option.id === 1"> <img src="assets/img/excel.png" /></i>
+                <i *ngIf="option.id === 2"> <img src="assets/img/pdf.png" /></i>
+                {{ option.name }}
+              </span>
+            </ng-template>
+          </p-dropdown>
+        </div>
+      </div>
+      <div class="px-5 py-3">
+        <p-table
+          class="CompareAccountTable"
+          #tt
+          [value]="compareAccountViewdata"
+          [columns]="compareAccountColumnsdata"
+          [resizableColumns]="true"
+          [showCurrentPageReport]="true"
+          currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+          [rows]="8"
+          selectionMode="multiple"
+          [globalFilterFields]="[
+            'parametersCompared',
+            'oldAccount',
+            'newAccount',
+            'remarks',
+            'review'
+          ]"
+        >
+          <ng-template pTemplate="header" let-columns>
+            <tr>
+              <th
+                pResizableColumn
+                [pSortableColumn]="col.field"
+                *ngFor="let col of columns"
+              >
+                <p-sortIcon [field]="col.field"></p-sortIcon>{{ col.header }}
+              </th>
+              <th class="review-column" title="Review">Review</th>
+            </tr>
+          </ng-template>
+  
+          <ng-template
+            pTemplate="body"
+            let-rowData
+            let-columns="columns"
+            let-i="rowIndex"
+          >
+            <tr>
+              <td *ngFor="let col of columns; let i = index">
+                {{ rowData[col.field] }}
+                <ng-container
+                  *ngIf="col.field !== 'parametersCompared'; else dropdownColumn"
+                ></ng-container>
+                <ng-template #dropdownColumn>
+                  <p-dropdown
+                    *ngIf="rowData.showDropdown"
+                    class="abc"
+                    placeholder="Select the Parameter"
+                    [appendTo]="'body'"
+                  ></p-dropdown>
+                </ng-template>
+              </td>
+              <td class="grid-review-buttons">
+                <div class="row">
+                  <p-dropdown
+                    class="abc"
+                    formControlName="no"
+                    placeholder="No"
+                    [appendTo]="'body'"
+                  ></p-dropdown>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+  
+          <ng-template pTemplate="emptymessage" let-columns>
+            <tr>
+              <td class="text-center" [attr.colspan]="columns.length + 1">
+                No records found
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+        <mat-card>
+          <mat-card-content
+            ><i class="fa fa-plus-circle" (click)="addRow()"></i
+          ></mat-card-content>
+        </mat-card>
+      </div>
+  
+      <div class="container">
+        <div class="contact-form row">
+          <div class="d-flex justify-content-center">
+            <div class="col-lg-12 px-5">
+              <div class="d-flex justify-content-end">
+                <button 
+                type="button" 
+                (click)="saveData()"
+                  pButton
+                  pRipple
+                  label="Save"
+                  class="p-button-Save"
+                >Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" class="hoverable-element">
+    Hover over me!
+  </div>

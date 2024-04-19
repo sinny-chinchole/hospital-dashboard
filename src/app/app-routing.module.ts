@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { CompareAccountsComponent } from './compare-accounts/compare-accounts.component';
 import { CompareResultsComponent } from './compare-results/compare-results.component';
 import { CaComponent } from './ca/ca.component';
+import { NewComponent } from './new/new.component';
 const routes: Routes = [
 
   { path: '', component:HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'accounts', component: CompareAccountsComponent},
   { path: 'results', component: CompareResultsComponent},
   { path: 'ca', component: CaComponent},
+  { path: 'new', component: NewComponent},
 ];
 
 @NgModule({

@@ -16,6 +16,17 @@ export class DashboardComponent {
   ngOnInit():void{
    
   }
+  onMouseEnter() {
+    console.log('Mouse entered');
+    // Add logic to execute when mouse enters
+    // For example, change a variable or apply a style
+  }
+
+  onMouseLeave() {
+    console.log('Mouse left');
+    // Add logic to execute when mouse leaves
+    // For example, reset a variable or style
+  }
 
 
 }

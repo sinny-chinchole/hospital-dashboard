@@ -24,6 +24,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 import { MatCard } from '@angular/material/card';
 import { MatCardModule } from '@angular/material/card';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { NewComponent } from './new/new.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { MatCardModule } from '@angular/material/card';
     CompareAccountsComponent,
     CompareResultsComponent,
     CaComponent,
+    SidenavComponent,
+    NewComponent,
   ],
   imports: [
     BrowserModule,

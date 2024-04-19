@@ -1,0 +1,77 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px; /* Adjust the width as needed */
+    background-color: #3050AB;
+    padding: 20px;
+  }
+  
+
+.nav-link {
+    color: #FFFFFF;
+
+    
+}
+.nav-item{
+    color: #1E3476;
+}
+.sidebar:hover {
+    width: 250px; /* Expand sidebar width on hover */
+    color: red;
+}
+
+
+.nav-link.active {
+    font-weight: bold;
+    
+}
+
+@media (min-width: 320px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 120px; /* Adjust the width as needed */
+        background-color: #3050AB;
+        padding: 2px; /* Adjusted width for tablets */
+    }
+  }
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 300px; /* Adjust the width as needed */
+        background-color: #3050AB;
+        padding: 20px; /* Adjusted width for tablets */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 400px; /* Adjust the width as needed */
+        background-color: #3050AB;
+        padding: 30px; /* Adjusted width for tablets */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 400px; /* Adjust the width as needed */
+        background-color: #3050AB;
+        padding: 20px; /* Adjusted width for tablets */
+    }
+  }
